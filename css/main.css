@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+h1 {
+    margin-bottom: 100px;
+    font-weight: normal;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li {
+    margin-bottom: 10px;
+}
+#socked {
+    color: #f33d3d;
+}
+#discord {
+    color: #6f85d2;
+}
+#twitter {
+    color: #1da1f2;
+}
+#github {
+    color: #24292e;
+}
+#hypixel {
+    color: #e2bb60;
+}
+img {
+    vertical-align: middle;
+}
+#hypixelImg {
+    height: 30px;
+}
