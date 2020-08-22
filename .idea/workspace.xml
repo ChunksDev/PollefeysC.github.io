@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f3bc683-8fc3-45fd-ae26-3409974e4485" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/livestats/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/livestats.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/livestats.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/livestats/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/livestats/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/livestats/livestats.js" beforeDir="false" afterPath="$PROJECT_DIR$/livestats/livestats.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +36,11 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\cedri\Documents\GitHub\PollefeysC.github.io\livestats" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -58,7 +66,7 @@
       <workItem from="1598036031717" duration="3706000" />
       <workItem from="1598081969172" duration="1662000" />
       <workItem from="1598083951512" duration="126000" />
-      <workItem from="1598098079842" duration="15192000" />
+      <workItem from="1598098079842" duration="25752000" />
     </task>
     <servers />
   </component>

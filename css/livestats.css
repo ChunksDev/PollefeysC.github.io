@@ -1,13 +1,43 @@
 body {
     text-align: center;
 }
-h1 {
+h1, h2, h4 {
     font-weight: normal;
+    vertical-align: center;
 }
 #invalid {
     color: #f33d3d;
 }
 #session {
-    height: 100px;
     border: 1px solid black;
+    margin: 0 10%;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+            ". left . right ."
+            ". bottom bottom bottom .";
+}
+.pstats {
+    color: #23d112;
+}
+.nstats {
+    color: #f33d3d;
+}
+.subsession {
+    justify-self: center;
+    width: 100%;
+    margin-top: 20px;
+}
+#left {
+    grid-area: left;
+    text-align: left;
+}
+#right {
+    grid-area: right;
+    text-align: left;
+}
+#bottom {
+    grid-area: bottom;
+    margin-bottom: 20px;
 }

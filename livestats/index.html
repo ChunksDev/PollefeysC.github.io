@@ -17,6 +17,7 @@
 <body>
 <header>
     <h1>pollefeys' livestats</h1>
+    <h4></h4>
 </header>
 <main>
     <form method="GET" name="apikeyform" id="apikeyform">
@@ -26,7 +27,23 @@
         <span id="invalid"></span>
     </form>
     <section id="session">
+        <section id="left" class="subsession">
+            <strong>Wins</strong> — <span id="wins"></span> <span id="swins" class="pstats"></span><br>
+            <strong>Losses</strong> — <span id="losses"></span> <span id="slosses" class="nstats"></span><br>
+            <strong>Win%</strong> — <span id="winpercentage"></span> <span id="swinpercentage"></span><br>
+            <br>
+            <strong>Kills</strong> — <span id="kills"></span> <span id="skills" class="pstats"></span><br>
+            <strong>Deaths</strong> — <span id="deaths"></span> <span id="sdeaths" class="nstats"></span><br>
+            <strong>K/D</strong> — <span id="kd"></span> <span id="skd"></span>
+        </section>
+        <section id="right" class="subsession">
 
+        </section>
+        <section id="bottom" class="subsession">
+            xp bar
+            <br>
+            shard bar
+        </section>
     </section>
 </main>
 </body>
