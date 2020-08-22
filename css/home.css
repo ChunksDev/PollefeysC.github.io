@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 body {
-    font-family: 'Roboto', sans-serif;
     text-align: center;
 }
 h1 {
     margin-bottom: 100px;
+}
+h1, h2 {
     font-weight: normal;
 }
 ul {
@@ -33,9 +32,6 @@ li {
 }
 #twitch {
     color: #9147ff;
-}
-#gmail {
-    color: #d93025;
 }
 
 img {

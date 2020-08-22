@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pollefeys' LiveStats</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.17.0/js/md5.js" integrity="sha512-NpfrQEgzOExS1Ax8fjITKrgBFK87lZbBmvWdZk4suiCC4tsHPrTCsulgIA7Z/+CeWhDpEP/f36mNWgZXDKtTAA==" crossorigin="anonymous"></script>    <script src="livestats.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/livestats.css">
+</head>
+<body>
+<header>
+    <h1>pollefeys' livestats</h1>
+</header>
+<main>
+    <form method="GET" name="apikeyform" id="apikeyform">
+        <input type="password" name="key" placeholder="Paste your API key here" id="key">
+        <input type="submit">
+        <br>
+        <span id="invalid"></span>
+    </form>
+    <section id="session">
+
+    </section>
+</main>
+</body>
+<script>initValidation(); runLiveStats();</script>
+</html>
