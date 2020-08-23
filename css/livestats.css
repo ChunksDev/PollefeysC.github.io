@@ -75,12 +75,15 @@ h1, h2, h4 {
     width: 0;
     height: 30px;
 }
-#xpbarprogress span, #shardsbarprogress span {
+#xpbartext, #shardsbartext {
     width: 100%;
     color: #292929;
     height: 30px;
     line-height: 30px;
     padding-left: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 #xpbarprogress {
     background-color: #ff81f3;

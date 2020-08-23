@@ -169,10 +169,10 @@ function updateProgressBars() {
     let xpbar = document.getElementById("xpbarprogress");
     let shardsbar = document.getElementById("shardsbarprogress");
 
-    xpbar.getElementsByTagName("SPAN").item(0).innerHTML = "EXP — " + formatNumber(xpIntoLevel(current.get("experience"))) + "/10,000";
+    document.getElementById("xpbartext").innerHTML = "EXP — " + formatNumber(xpIntoLevel(current.get("experience"))) + "/10,000";
     xpbar.style.width = xpIntoLevel(current.get("experience"))/100 + "%";
 
-    shardsbar.getElementsByTagName("SPAN").item(0).innerHTML = "Shards —" + formatNumber(current.get("shard")) + "/20,000";
+    document.getElementById("shardsbartext").innerHTML = "Shards — " + formatNumber(current.get("shard")) + "/20,000";
     shardsbar.style.width = current.get("shard")/200 + "%";
 }
 
