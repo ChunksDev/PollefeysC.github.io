@@ -1,10 +1,27 @@
-let whitelist = ["e7de1ed5ec6d3d2d4f37d9142785ba40"];
+let whitelist = [
+    //pollefeys
+    "e7de1ed5ec6d3d2d4f37d9142785ba40",
+    //chqv
+    "46ad38343094f4ee2ad80bd045123f16"
+];
 let keyOwnerUuid = null;
 let ownerIGN = null;
 let apikey = null;
 let initial = new Map();
 let current = new Map();
 let continueSession = true;
+let sessionTime = 0;
+
+let lastLoss = 0;
+let winsAtLastLoss = 0;
+let bestWinstreak = 0;
+
+let lastDeath = 0;
+let killsAtLastDeath = 0;
+let bestKillstreak = 0;
+
+let recentShards = 0;
+let opalsGained = 0;
 
 function runLiveStats() {
     if (isUrlKeyValid()) {
@@ -24,6 +41,8 @@ function initStats() {
             document.getElementsByTagName("H4").item(0).innerHTML = "You're <strong>1</strong> out of <strong>" + whitelist.length + "</strong> whitelisted players";
             getSessionStartData();
             sessionLoop();
+            sessionTime = Date.now();
+            sessionClock();
         })
 }
 
@@ -39,9 +58,13 @@ function getSessionStartData() {
             }
             let stats = player.stats.SkyWars;
             initial.set("wins", stats.wins);
+            winsAtLastLoss = stats.wins;
             initial.set("losses", stats.losses);
+            lastLoss = stats.losses;
             initial.set("kills", stats.kills);
+            killsAtLastDeath = stats.kills;
             initial.set("deaths", stats.deaths);
+            lastDeath = stats.deaths;
             initial.set("coins", stats.coins);
             initial.set("experience", stats.skywars_experience);
             initial.set("heads", stats.heads);
@@ -51,9 +74,17 @@ function getSessionStartData() {
 
 async function sessionLoop() {
     getSessionCurrentData();
-    await wait(3000);
+    await wait(2000);
     if (continueSession){
         await sessionLoop();
+    }
+}
+
+async function sessionClock() {
+    document.getElementById("sessionDuration").innerHTML = sessionDurationString(sessionDuration());
+    await wait(1000);
+    if (continueSession){
+        await sessionClock();
     }
 }
 
@@ -70,28 +101,111 @@ function getSessionCurrentData() {
             current.set("experience", stats.skywars_experience);
             current.set("heads", stats.heads);
             current.set("shard", stats.shard);
-            updateVisuals();
+            checkForShardReset();
+            if (current.get("losses") != lastLoss) {
+                lastLoss = current.get("losses");
+                winsAtLastLoss = current.get("wins");
+            }
+            if (current.get("deaths") != lastDeath) {
+                lastDeath = current.get("deaths");
+                killsAtLastDeath = current.get("kills");
+            }
+            updateMainSessionVisuals();
         })
 }
 
-function updateVisuals() {
-    document.getElementById("wins").innerHTML = current.get("wins");
+function updateMainSessionVisuals() {
+    document.getElementById("wins").innerHTML = formatNumber(current.get("wins"));
         document.getElementById("swins").innerHTML = "(+" + (current.get("wins")-initial.get("wins")).toString() + ")";
 
-    document.getElementById("losses").innerHTML = current.get("losses");
+    document.getElementById("losses").innerHTML = formatNumber(current.get("losses"));
         document.getElementById("slosses").innerHTML = "(+" + (current.get("losses")-initial.get("losses")).toString() + ")";
 
     document.getElementById("winpercentage").innerHTML = getCurrentWinPercentage() + "%";
         document.getElementById("swinpercentage").innerHTML = "(" + getSessionWinPercentage() + ")";
 
-    document.getElementById("kills").innerHTML = current.get("kills");
-        document.getElementById("skills").innerHTML = "(+" + (current.get("kills")-initial.get("kills")).toString() + ")";
+    document.getElementById("kills").innerHTML = formatNumber(current.get("kills"));
+        document.getElementById("skills").innerHTML = "(+" + formatNumber((current.get("kills")-initial.get("kills")).toString()) + ")";
 
-    document.getElementById("deaths").innerHTML = current.get("deaths");
-        document.getElementById("sdeaths").innerHTML = "(+" + (current.get("deaths")-initial.get("deaths")).toString() + ")";
+    document.getElementById("deaths").innerHTML = formatNumber(current.get("deaths"));
+        document.getElementById("sdeaths").innerHTML = "(+" + formatNumber((current.get("deaths")-initial.get("deaths")).toString()) + ")";
 
     document.getElementById("kd").innerHTML = getCurrentKD().toString();
         document.getElementById("skd").innerHTML = "(" + getSessionKD() + ")";
+
+    document.getElementById("swexp").innerHTML = formatNumber(current.get("experience"));
+        document.getElementById("sswexp").innerHTML = "(+" + (current.get("experience")-initial.get("experience")).toString() + ")";
+
+    document.getElementById("coins").innerHTML = formatNumber(current.get("coins"));
+        document.getElementById("scoins").innerHTML = "(+" + (current.get("coins")-initial.get("coins")).toString() + ")";
+
+    document.getElementById("heads").innerHTML = formatNumber(current.get("heads"));
+        document.getElementById("sheads").innerHTML = "(+" + (current.get("heads")-initial.get("heads")).toString() + ")";
+
+    document.getElementById("shards").innerHTML = formatNumber(current.get("shard"));
+        document.getElementById("sshards").innerHTML = "(+" + (current.get("shard")-initial.get("shard")+(opalsGained*20000)).toString() + ")";
+
+    document.getElementById("winstreak").innerHTML = formatNumber(getWinstreak());
+    document.getElementById("killstreak").innerHTML = formatNumber(getKillstreak());
+
+    document.getElementById("bestws").innerHTML = formatNumber(bestWinstreak);
+    document.getElementById("bestks").innerHTML = formatNumber(bestKillstreak);
+
+    updateProgressBars();
+}
+
+function checkForShardReset() {
+    if (current.get("shard") < recentShards){
+        opalsGained += 1;
+    }
+    recentShards = current.get("shard");
+}
+
+function sessionDuration() {
+    return Date.now() - sessionTime;
+}
+
+function updateProgressBars() {
+    let xpbar = document.getElementById("xpbarprogress");
+    let shardsbar = document.getElementById("shardsbarprogress");
+
+    xpbar.getElementsByTagName("SPAN").item(0).innerHTML = "EXP — " + formatNumber(xpIntoLevel(current.get("experience"))) + "/10,000";
+    xpbar.style.width = xpIntoLevel(current.get("experience"))/100 + "%";
+
+    shardsbar.getElementsByTagName("SPAN").item(0).innerHTML = "Shards —" + formatNumber(current.get("shard")) + "/20,000";
+    shardsbar.style.width = current.get("shard")/200 + "%";
+}
+
+//only works above level 12
+function xpIntoLevel(experience) {
+    return (experience - 5000)%10000;
+}
+
+function sessionDurationString(duration) {
+    let ms = duration % 1000 / 100;
+    let seconds = Math.floor((duration / 1000) % 60);
+    let minutes = Math.floor((duration / (1000 * 60)) % 60);
+    let hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
+
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+    return hours + ":" + minutes + ":" + seconds;
+}
+
+function getWinstreak() {
+    if (current.get("wins")-winsAtLastLoss > bestWinstreak) {
+        bestWinstreak = current.get("wins")-winsAtLastLoss;
+    }
+    return current.get("wins")-winsAtLastLoss;
+}
+
+function getKillstreak() {
+    if (current.get("kills")-killsAtLastDeath > bestKillstreak) {
+        bestKillstreak = current.get("kills")-killsAtLastDeath;
+    }
+    return current.get("kills")-killsAtLastDeath;
 }
 
 function getCurrentWinPercentage() {
@@ -105,7 +219,7 @@ function getSessionWinPercentage() {
     if ((current.get("losses")-initial.get("losses"))+(current.get("wins")-initial.get("wins")) == 0) {
         return "N/A";
     }
-    return Math.round((current.get("wins")-initial.get("wins"))/((current.get("losses")-initial.get("losses"))+(current.get("wins")-initial.get("wins")))*10000)/100;
+    return Math.round((current.get("wins")-initial.get("wins"))/((current.get("losses")-initial.get("losses"))+(current.get("wins")-initial.get("wins")))*10000)/100 + "%";
 }
 
 function getCurrentKD() {
@@ -165,4 +279,8 @@ function getParam(name) {
         return result[1];
     }
     return null;
+}
+
+function formatNumber(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 }
