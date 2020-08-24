@@ -7,6 +7,8 @@ let whitelist = [
     "46ad38343094f4ee2ad80bd045123f16",
     //Swkills
     "5e7c9aca54bbc93e41afc804972ea7e4",
+    //espenode
+    "c873cd58d150af3f9fd22702ae63d869",
     //BETA TESTER
     //virmah
     "6f687b16e475b734acedb54c51244ff2",
@@ -15,7 +17,7 @@ let whitelist = [
     "392afaae0f1457dc5a22b995522a94f1",
     //JT/Squat (discord)
     "f52017b97e5e0ffbf5bc3bd92a5a22f0",
-    //ssuika (discord)
+    //suika (discord)
     "12babd7cfb5b0c7e2d3862fd3d67f4ec"
 ];
 let keyOwnerUuid = null;
