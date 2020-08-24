@@ -23,10 +23,6 @@ let bestKillstreak = 0;
 let recentShards = 0;
 let opalsGained = 0;
 
-function setupEventListeners() {
-    window.addEventListener("beforeunload", storeStreaks);
-}
-
 function runLiveStats() {
     if (isUrlKeyValid()) {
         document.getElementById("apikeyform").style.display = "none";
@@ -57,9 +53,9 @@ function getSessionStartData() {
         .then(({ player }) => {
             ownerIGN = player.displayname;
             if (ownerIGN.substring(ownerIGN.length-1) == "s") {
-                document.getElementsByTagName("H1").item(0).innerHTML = ownerIGN + "' livestats" + " <img src='http://cravatar.eu/helmavatar/" + keyOwnerUuid + "/24.png'>";
+                document.getElementsByTagName("H1").item(0).innerHTML = ownerIGN + "' livestats" + " <img src='https://cravatar.eu/helmavatar/" + keyOwnerUuid + "/24.png'>";
             } else {
-                document.getElementsByTagName("H1").item(0).innerHTML = ownerIGN + "'s livestats" + " <img src='http://cravatar.eu/helmavatar/" + keyOwnerUuid + "/24.png'>";
+                document.getElementsByTagName("H1").item(0).innerHTML = ownerIGN + "'s livestats" + " <img src='https://cravatar.eu/helmavatar/" + keyOwnerUuid + "/24.png'>";
             }
             let stats = player.stats.SkyWars;
             initial.set("wins", stats.wins);
@@ -162,6 +158,7 @@ function updateMainSessionVisuals() {
     document.getElementById("hourlyshards").innerHTML = formatNumber(statPerHour(Math.round((current.get("shard")-initial.get("shard")+(opalsGained*20000))*100)/100));
 
     updateProgressBars();
+    storeStreaks();
 }
 
 function checkForShardReset() {
