@@ -187,10 +187,10 @@ function storeStreaks() {
 }
 
 function getStreaks() {
-    if (getCookie("winstreak") != ""){
+    if (getCookie("winstreak") != "" && getCookie("winstreak") > bestWinstreak){
         bestWinstreak = parseInt(getCookie("winstreak"));
     }
-    if (getCookie("killstreak") != ""){
+    if (getCookie("killstreak") != "" && getCookie("killstreak") > bestKillstreak){
         bestKillstreak = parseInt(getCookie("killstreak"));
     }
 }
