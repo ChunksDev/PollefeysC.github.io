@@ -20,7 +20,9 @@ let whitelist = [
     //suika (discord)
     "12babd7cfb5b0c7e2d3862fd3d67f4ec",
     //SirHingeAlot (discord)
-    "8a6e3435d768bd33dd1f927afe9330b3"
+    "8a6e3435d768bd33dd1f927afe9330b3",
+    //Unfeatured (discord)
+    "52fde0a5bd49914f6b20f34ae0baf7c8"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
