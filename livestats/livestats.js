@@ -156,10 +156,10 @@ function updateMainSessionVisuals() {
     document.getElementById("bestws").innerHTML = formatNumber(bestWinstreak);
     document.getElementById("bestks").innerHTML = formatNumber(bestKillstreak);
 
-    document.getElementById("hourlywins").innerHTML = formatNumber(statPerHour(current.get("wins")-initial.get("wins")));
-    document.getElementById("hourlykills").innerHTML = formatNumber(statPerHour(current.get("kills")-initial.get("kills")));
-    document.getElementById("hourlyexp").innerHTML = formatNumber(statPerHour(current.get("experience")-initial.get("experience")));
-    document.getElementById("hourlyshards").innerHTML = formatNumber(statPerHour(current.get("shard")-initial.get("shard")+(opalsGained*20000)));
+    document.getElementById("hourlywins").innerHTML = formatNumber(statPerHour(Math.round((current.get("wins")-initial.get("wins"))*100)/100));
+    document.getElementById("hourlykills").innerHTML = formatNumber(statPerHour(Math.round((current.get("kills")-initial.get("kills"))*100)/100));
+    document.getElementById("hourlyexp").innerHTML = formatNumber(statPerHour(Math.round((current.get("experience")-initial.get("experience"))*100)/100));
+    document.getElementById("hourlyshards").innerHTML = formatNumber(statPerHour(Math.round((current.get("shard")-initial.get("shard")+(opalsGained*20000))*100)/100));
 
     updateProgressBars();
 }
