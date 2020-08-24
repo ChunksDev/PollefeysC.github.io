@@ -101,7 +101,7 @@ async function sessionLoop() {
 }
 
 async function sessionGa() {
-    ga('send', 'pageview', location.pathname);
+    ga('send', 'pageview');
     await wait(30000);
     if (continueSession){
         await sessionGa();
