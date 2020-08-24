@@ -9,7 +9,10 @@ let whitelist = [
     //virmah
     "6f687b16e475b734acedb54c51244ff2",
     //PAID
-    "392afaae0f1457dc5a22b995522a94f1"
+    //Vetiver (twitter)
+    "392afaae0f1457dc5a22b995522a94f1",
+    //JT/Squat (discord)
+    "f52017b97e5e0ffbf5bc3bd92a5a22f0"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
