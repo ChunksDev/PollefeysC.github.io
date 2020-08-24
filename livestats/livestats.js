@@ -191,7 +191,7 @@ function getStreaks() {
         bestWinstreak = parseInt(getCookie("winstreak"));
     }
     if (getCookie("killstreak") != ""){
-        bestWinstreak = parseInt(getCookie("killstreak"));
+        bestKillstreak = parseInt(getCookie("killstreak"));
     }
 }
 
