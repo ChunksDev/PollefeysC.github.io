@@ -2,7 +2,9 @@ let whitelist = [
     //pollefeys
     "e7de1ed5ec6d3d2d4f37d9142785ba40",
     //chqv
-    "46ad38343094f4ee2ad80bd045123f16"
+    "46ad38343094f4ee2ad80bd045123f16",
+    //virmah
+    "6f687b16e475b734acedb54c51244ff2"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
