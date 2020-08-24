@@ -8,7 +8,7 @@ let whitelist = [
     //Swkills
     "5e7c9aca54bbc93e41afc804972ea7e4",
     //espenode
-    "c873cd58d150af3f9fd22702ae63d869",
+    "4ae43fa1ef9c94257ae8c7703eb4ea12",
     //BETA TESTER
     //virmah
     "6f687b16e475b734acedb54c51244ff2",
@@ -16,7 +16,7 @@ let whitelist = [
     //Vetiver (twitter)
     "392afaae0f1457dc5a22b995522a94f1",
     //JT/Squat (discord)
-    "f52017b97e5e0ffbf5bc3bd92a5a22f0",
+    "bb531d86625bfb1351b1d49102c8a80a",
     //suika (discord)
     "12babd7cfb5b0c7e2d3862fd3d67f4ec"
 ];
