@@ -18,7 +18,9 @@ let whitelist = [
     //JT/Squat (discord)
     "bb531d86625bfb1351b1d49102c8a80a",
     //suika (discord)
-    "12babd7cfb5b0c7e2d3862fd3d67f4ec"
+    "12babd7cfb5b0c7e2d3862fd3d67f4ec",
+    //SirHingeAlot (discord)
+    "8a6e3435d768bd33dd1f927afe9330b3"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
@@ -59,6 +61,7 @@ function initStats() {
             sessionLoop();
             sessionTime = Date.now();
             sessionClock();
+            sessionGa();
         })
 }
 
@@ -94,6 +97,14 @@ async function sessionLoop() {
     await wait(2000);
     if (continueSession){
         await sessionLoop();
+    }
+}
+
+async function sessionGa() {
+    ga("send", "pageview", "");
+    await wait(60000);
+    if (continueSession){
+        await sessionGa();
     }
 }
 
