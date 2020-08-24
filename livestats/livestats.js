@@ -177,8 +177,13 @@ function statPerHour(sessionStat) {
 }
 
 function storeStreaks() {
-    document.cookie = "winstreak=" + bestWinstreak + "; expires=Thu, 6 Dec 2035 12:00:00 UTC";
-    document.cookie = "killstreak=" + bestKillstreak + "; expires=Thu, 6 Dec 2035 12:00:00 UTC";
+    getStreaks();
+    if (bestWinstreak > getCookie("winstreak")) {
+        document.cookie = "winstreak=" + bestWinstreak + "; expires=Thu, 6 Dec 2035 12:00:00 UTC";
+    }
+    if (bestKillstreak > getCookie("killstreak")) {
+        document.cookie = "killstreak=" + bestKillstreak + "; expires=Thu, 6 Dec 2035 12:00:00 UTC";
+    }
 }
 
 function getStreaks() {
