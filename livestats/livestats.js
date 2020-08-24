@@ -5,6 +5,8 @@ let whitelist = [
     //LB
     //chqv
     "46ad38343094f4ee2ad80bd045123f16",
+    //Swkills
+    "5e7c9aca54bbc93e41afc804972ea7e4",
     //BETA TESTER
     //virmah
     "6f687b16e475b734acedb54c51244ff2",
