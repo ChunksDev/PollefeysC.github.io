@@ -14,7 +14,9 @@ let whitelist = [
     //Vetiver (twitter)
     "392afaae0f1457dc5a22b995522a94f1",
     //JT/Squat (discord)
-    "f52017b97e5e0ffbf5bc3bd92a5a22f0"
+    "f52017b97e5e0ffbf5bc3bd92a5a22f0",
+    //ssuika (discord)
+    "12babd7cfb5b0c7e2d3862fd3d67f4ec"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
