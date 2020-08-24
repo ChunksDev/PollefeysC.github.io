@@ -1,10 +1,15 @@
 let whitelist = [
+    //DEV
     //pollefeys
     "e7de1ed5ec6d3d2d4f37d9142785ba40",
+    //LB
     //chqv
     "46ad38343094f4ee2ad80bd045123f16",
+    //BETA TESTER
     //virmah
-    "6f687b16e475b734acedb54c51244ff2"
+    "6f687b16e475b734acedb54c51244ff2",
+    //PAID
+    "392afaae0f1457dc5a22b995522a94f1"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
