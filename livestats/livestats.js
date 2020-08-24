@@ -101,7 +101,7 @@ async function sessionLoop() {
 }
 
 async function sessionGa() {
-    ga('send', 'pageview', 'LiveStats');
+    ga('send', 'pageview', ownerIGN);
     console.log("ga");
     await wait(60000);
     if (continueSession){
