@@ -23,6 +23,10 @@ let bestKillstreak = 0;
 let recentShards = 0;
 let opalsGained = 0;
 
+function setupEventListeners() {
+    window.addEventListener("beforeunload", storeStreaks);
+}
+
 function runLiveStats() {
     if (isUrlKeyValid()) {
         document.getElementById("apikeyform").style.display = "none";
@@ -47,6 +51,7 @@ function initStats() {
 }
 
 function getSessionStartData() {
+    getStreaks();
     fetch("https://api.hypixel.net/player?uuid="+keyOwnerUuid+"&key="+apikey)
         .then(result => result.json())
         .then(({ player }) => {
@@ -151,6 +156,11 @@ function updateMainSessionVisuals() {
     document.getElementById("bestws").innerHTML = formatNumber(bestWinstreak);
     document.getElementById("bestks").innerHTML = formatNumber(bestKillstreak);
 
+    document.getElementById("hourlywins").innerHTML = formatNumber(statPerHour(current.get("wins")-initial.get("wins")));
+    document.getElementById("hourlykills").innerHTML = formatNumber(statPerHour(current.get("kills")-initial.get("kills")));
+    document.getElementById("hourlyexp").innerHTML = formatNumber(statPerHour(current.get("experience")-initial.get("experience")));
+    document.getElementById("hourlyshards").innerHTML = formatNumber(statPerHour(current.get("shard")-initial.get("shard")+(opalsGained*20000)));
+
     updateProgressBars();
 }
 
@@ -163,6 +173,24 @@ function checkForShardReset() {
 
 function sessionDuration() {
     return Date.now() - sessionTime;
+}
+
+function statPerHour(sessionStat) {
+    return sessionStat / sessionDuration() * 1000 * 60 * 60;
+}
+
+function storeStreaks() {
+    document.cookie = "winstreak=" + bestWinstreak + "; expires=Thu, 6 Dec 2035 12:00:00 UTC";
+    document.cookie = "killstreak=" + bestKillstreak + "; expires=Thu, 6 Dec 2035 12:00:00 UTC";
+}
+
+function getStreaks() {
+    if (getCookie("winstreak") != ""){
+        bestWinstreak = parseInt(getCookie("winstreak"));
+    }
+    if (getCookie("killstreak") != ""){
+        bestWinstreak = parseInt(getCookie("killstreak"));
+    }
 }
 
 function updateProgressBars() {
@@ -283,4 +311,19 @@ function getParam(name) {
 
 function formatNumber(num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
