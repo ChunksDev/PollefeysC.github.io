@@ -110,3 +110,8 @@ h1, h2, h4 {
     border-left: 20px solid rgba(0,0,0,0);
     width: 0;
 }
+#betaList {
+    list-style: none;
+    padding-left: 0;
+    font-size: 80%;
+}
