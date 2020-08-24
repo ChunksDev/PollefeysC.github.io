@@ -12,6 +12,8 @@ let whitelist = [
     //BETA TESTER
     //virmah
     "6f687b16e475b734acedb54c51244ff2",
+    //updation
+    "f26e95e4a8020a0235e41843bc695891",
     //PAID
     //Vetiver (twitter)
     "392afaae0f1457dc5a22b995522a94f1",
