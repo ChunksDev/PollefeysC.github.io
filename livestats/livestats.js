@@ -101,7 +101,10 @@ async function sessionLoop() {
 }
 
 async function sessionGa() {
-    ga("send", "pageview", "");
+    ga('send', {
+        'hitType': 'pageview',
+        'page': 'LiveStats'
+    });
     await wait(60000);
     if (continueSession){
         await sessionGa();
