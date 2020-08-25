@@ -8,6 +8,9 @@ h1, h2, h4 {
     font-weight: normal;
     vertical-align: center;
 }
+form section h2 {
+    text-decoration: underline;
+}
 #invalid {
     color: #f33d3d;
 }

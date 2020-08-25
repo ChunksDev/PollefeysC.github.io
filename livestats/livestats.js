@@ -76,9 +76,9 @@ function getSessionStartData() {
         .then(({ player }) => {
             ownerIGN = player.displayname;
             if (ownerIGN.substring(ownerIGN.length-1) == "s") {
-                document.getElementsByTagName("H1").item(0).innerHTML = ownerIGN + "' livestats" + " <img src='https://cravatar.eu/helmavatar/" + keyOwnerUuid + "/24.png'>";
+                document.getElementsByTagName("H1").item(0).innerHTML = ownerIGN + "' LiveStats" + " <img src='https://cravatar.eu/helmavatar/" + keyOwnerUuid + "/32.png'>";
             } else {
-                document.getElementsByTagName("H1").item(0).innerHTML = ownerIGN + "'s livestats" + " <img src='https://cravatar.eu/helmavatar/" + keyOwnerUuid + "/24.png'>";
+                document.getElementsByTagName("H1").item(0).innerHTML = ownerIGN + "'s LiveStats" + " <img src='https://cravatar.eu/helmavatar/" + keyOwnerUuid + "/32.png'>";
             }
             let stats = player.stats.SkyWars;
             initial.set("wins", stats.wins);
