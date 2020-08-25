@@ -153,7 +153,7 @@ function updateMainSessionVisuals() {
     document.getElementById("losses").innerHTML = formatNumber(current.get("losses"));
         document.getElementById("slosses").innerHTML = "(+" + (current.get("losses")-initial.get("losses")).toString() + ")";
 
-    document.getElementById("winpercentage").innerHTML = getCurrentWinPercentage() + "%";
+    document.getElementById("winpercentage").innerHTML = getCurrentWinPercentage();
         document.getElementById("swinpercentage").innerHTML = "(" + getSessionWinPercentage() + ")";
 
     document.getElementById("kills").innerHTML = formatNumber(current.get("kills"));
@@ -270,17 +270,17 @@ function getKillstreak() {
 }
 
 function getCurrentWinPercentage() {
-    if (current.get("losses")+current.get("wins") == 0) {
-        return "N/A";
+    if (current.get("losses") == 0) {
+        return "&infin;";
     }
-    return Math.round(current.get("wins")/(current.get("losses")+current.get("wins"))*10000)/100;
+    return Math.round(current.get("wins")/current.get("losses")*10000)/10000;
 }
 
 function getSessionWinPercentage() {
-    if ((current.get("losses")-initial.get("losses"))+(current.get("wins")-initial.get("wins")) == 0) {
-        return "N/A";
+    if (current.get("losses")-initial.get("losses") == 0) {
+        return "&infin;";
     }
-    return Math.round((current.get("wins")-initial.get("wins"))/((current.get("losses")-initial.get("losses"))+(current.get("wins")-initial.get("wins")))*10000)/100 + "%";
+    return Math.round((current.get("wins")-initial.get("wins"))/(current.get("losses")-initial.get("losses"))*10000)/10000;
 }
 
 function getCurrentKD() {

@@ -33,10 +33,18 @@ li {
 #twitch {
     color: #9147ff;
 }
+#livestats {
+    color: #24292e;
+}
 
 img {
     vertical-align: middle;
 }
 #hypixelImg {
     height: 30px;
+}
+
+nav, section#projects {
+    float: left;
+    width: 50%;
 }
