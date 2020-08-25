@@ -109,7 +109,11 @@ async function sessionLoop() {
 }
 
 async function sessionGa() {
-    ga('send', 'pageview', 'livestats/'+ownerIGN);
+    if (ownerIGN == null) {
+        ga('send', 'pageview', 'livestats/LOADING');
+    } else {
+        ga('send', 'pageview', 'livestats/'+ownerIGN);
+    }
     await wait(60000);
     if (continueSession){
         await sessionGa();
