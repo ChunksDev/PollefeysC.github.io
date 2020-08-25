@@ -52,6 +52,7 @@ function runLiveStats() {
         initStats();
     } else {
         document.getElementById("session").style.display = "none";
+        document.getElementById("lastGame").style.display = "none";
     }
 }
 
@@ -93,6 +94,7 @@ function getSessionStartData() {
             initial.set("experience", stats.skywars_experience);
             initial.set("heads", stats.heads);
             initial.set("shard", stats.shard);
+            initLastGame();
         })
 }
 
