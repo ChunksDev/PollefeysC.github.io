@@ -166,16 +166,16 @@ function updateMainSessionVisuals() {
         document.getElementById("skd").innerHTML = "(" + getSessionKD() + ")";
 
     document.getElementById("swexp").innerHTML = formatNumber(current.get("experience"));
-        document.getElementById("sswexp").innerHTML = "(+" + (current.get("experience")-initial.get("experience")).toString() + ")";
+        document.getElementById("sswexp").innerHTML = "(+" + formatNumber((current.get("experience")-initial.get("experience")).toString()) + ")";
 
     document.getElementById("coins").innerHTML = formatNumber(current.get("coins"));
-        document.getElementById("scoins").innerHTML = "(+" + (current.get("coins")-initial.get("coins")).toString() + ")";
+        document.getElementById("scoins").innerHTML = "(+" + formatNumber((current.get("coins")-initial.get("coins")).toString()) + ")";
 
     document.getElementById("heads").innerHTML = formatNumber(current.get("heads"));
-        document.getElementById("sheads").innerHTML = "(+" + (current.get("heads")-initial.get("heads")).toString() + ")";
+        document.getElementById("sheads").innerHTML = "(+" + formatNumber((current.get("heads")-initial.get("heads")).toString()) + ")";
 
     document.getElementById("shards").innerHTML = formatNumber(current.get("shard"));
-        document.getElementById("sshards").innerHTML = "(+" + (current.get("shard")-initial.get("shard")+(opalsGained*20000)).toString() + ")";
+        document.getElementById("sshards").innerHTML = "(+" + formatNumber((current.get("shard")-initial.get("shard")+(opalsGained*20000)).toString()) + ")";
 
     document.getElementById("winstreak").innerHTML = formatNumber(getWinstreak());
     document.getElementById("killstreak").innerHTML = formatNumber(getKillstreak());
