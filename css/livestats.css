@@ -4,12 +4,9 @@ body {
     color: #e2e2e2;
     font-size: 130%;
 }
-h1, h2, h4 {
+h1, h2, h3, h4 {
     font-weight: normal;
     vertical-align: center;
-}
-form section h2 {
-    text-decoration: underline;
 }
 #invalid {
     color: #f33d3d;
@@ -32,16 +29,16 @@ form section h2 {
 .nstats {
     color: #FF5555;
 }
-#sswexp {
+#sswexp, #lgExperience {
     color: #FF55FF;
 }
-#scoins {
+#scoins, #lgCoins {
     color: #FFAA00;
 }
-#sheads {
+#sheads, #lgHeads {
     color: #AA00AA;
 }
-#sshards {
+#sshards, #lgShards {
     color: #55FFFF;
 }
 .subsession {
@@ -119,4 +116,45 @@ form section h2 {
     list-style: none;
     padding-left: 0;
     font-size: 80%;
+}
+#lgLeft {
+    text-align: left;
+    grid-area: left;
+    padding-left: 10px;
+}
+#lgRight {
+    text-align: left;
+    grid-area: right;
+    padding-left: 10px;
+}
+#lastGame h2 {
+    grid-area: header;
+}
+#lastGame {
+    display: grid;
+    padding-bottom: 20px;
+    grid-template-columns: 2fr 5fr 1fr 5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "header header header header header"
+            ". left . right .";
+}
+.ggLoss {
+    background-color: #FF5555;
+}
+.ggWin {
+    background-color: #00AA00;
+}
+.ggWin, .ggLoss {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    float: left;
+}
+.ggCorrupted {
+    border: 2px solid #AA00AA;
+    box-sizing: border-box;
 }

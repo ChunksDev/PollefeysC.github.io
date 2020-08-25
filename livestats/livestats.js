@@ -14,6 +14,8 @@ let whitelist = [
     "6f687b16e475b734acedb54c51244ff2",
     //updation
     "f26e95e4a8020a0235e41843bc695891",
+    //reeedly
+    "9df4ea03fa8685917669aee1cc30d4b6",
     //PAID
     //Vetiver (twitter)
     "392afaae0f1457dc5a22b995522a94f1",
@@ -94,7 +96,7 @@ function getSessionStartData() {
             initial.set("experience", stats.skywars_experience);
             initial.set("heads", stats.heads);
             initial.set("shard", stats.shard);
-            initLastGame();
+            initLastGameModule();
         })
 }
 
@@ -144,6 +146,7 @@ function getSessionCurrentData() {
                 lastDeath = current.get("deaths");
                 killsAtLastDeath = current.get("kills");
             }
+            checkFinishedGame();
             updateMainSessionVisuals();
         })
 }
