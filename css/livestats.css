@@ -163,7 +163,7 @@ h1, h2, h3, h4 {
     border: 2px solid #AA00AA;
     box-sizing: border-box;
 }
-.draggable {
+.draggable h2 {
     cursor: move;
 }
 .dragging {
