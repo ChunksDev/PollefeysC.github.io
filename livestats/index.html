@@ -18,6 +18,7 @@
     <script src="livestats.js"></script>
     <script src="lastgame.js"></script>
     <script src="draggable.js"></script>
+    <script src="collapse.js"></script>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/livestats.css">
     <link rel="../apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
@@ -42,7 +43,7 @@
         <br>
         <section>
             <h2>
-                pollefeys' LiveStats is currently exclusive to:
+                Currently exclusive to:
             </h2>
             <p id="betaList">
                 Top 10 SkyWars Players (Overall) <br>
@@ -56,6 +57,7 @@
         </section>
     </form>
     <section id="session" class="draggable" draggable="true">
+        <h2>Session<img src="https://img.icons8.com/material/96/000000/collapse--v2.png" draggable="false"/></h2>
         <section id="left" class="subsession">
             <strong>Wins</strong> — <span id="wins"></span> <span id="swins" class="pstats"></span><br>
             <strong>Losses</strong> — <span id="losses"></span> <span id="slosses" class="nstats"></span><br>
@@ -100,7 +102,7 @@
         </section>
     </section>
     <section id="lastGame" class="draggable" draggable="true">
-        <h2>Game History</h2>
+        <h2>Game History<img src="https://img.icons8.com/material/96/000000/collapse--v2.png" draggable="false"/></h2>
         <section id="lgLeft">
             <h3>Last Game</h3>
             <span id="lgKills"></span> <br>
@@ -119,5 +121,5 @@
     </section>
 </main>
 </body>
-<script>initValidation(); initDragEventListeners(); runLiveStats();</script>
+<script>initValidation(); initDragEventListeners(); initCollapse(); runLiveStats();</script>
 </html>

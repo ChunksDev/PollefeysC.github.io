@@ -16,6 +16,7 @@ h1, h2, h3, h4 {
     grid-template-columns: 1fr 5fr 3fr 1fr 4fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
+            "header header header header header header"
             ". left middle . right ."
             ". bottom bottom bottom bottom .";
 }
@@ -45,6 +46,10 @@ h1, h2, h3, h4 {
     justify-self: center;
     width: 100%;
     margin-top: 20px;
+}
+#session h2 {
+    grid-area: header;
+    width: 100%;
 }
 #left {
     grid-area: left;
@@ -163,4 +168,19 @@ h1, h2, h3, h4 {
 }
 .dragging {
     opacity: 0.5;
+}
+h2 {
+    background-color: #e2e2e2;
+    color: #292929;
+    margin-top: 0;
+    position: relative;
+}
+h2 img {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    cursor: pointer;
+}
+#session section, #lastGame section {
+    display: block;
 }
