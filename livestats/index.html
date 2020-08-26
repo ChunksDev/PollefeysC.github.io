@@ -17,6 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.17.0/js/md5.js" integrity="sha512-NpfrQEgzOExS1Ax8fjITKrgBFK87lZbBmvWdZk4suiCC4tsHPrTCsulgIA7Z/+CeWhDpEP/f36mNWgZXDKtTAA==" crossorigin="anonymous"></script>
     <script src="livestats.js"></script>
     <script src="lastgame.js"></script>
+    <script src="draggable.js"></script>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/livestats.css">
     <link rel="../apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
@@ -54,7 +55,7 @@
             </p>
         </section>
     </form>
-    <section id="session">
+    <section id="session" class="draggable" draggable="true">
         <section id="left" class="subsession">
             <strong>Wins</strong> — <span id="wins"></span> <span id="swins" class="pstats"></span><br>
             <strong>Losses</strong> — <span id="losses"></span> <span id="slosses" class="nstats"></span><br>
@@ -98,7 +99,7 @@
             </div>
         </section>
     </section>
-    <section id="lastGame">
+    <section id="lastGame" class="draggable" draggable="true">
         <h2>Game History</h2>
         <section id="lgLeft">
             <h3>Last Game</h3>
@@ -118,5 +119,5 @@
     </section>
 </main>
 </body>
-<script>initValidation(); runLiveStats();</script>
+<script>initValidation(); initDragEventListeners(); runLiveStats();</script>
 </html>

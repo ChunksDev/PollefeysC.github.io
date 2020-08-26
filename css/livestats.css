@@ -158,3 +158,9 @@ h1, h2, h3, h4 {
     border: 2px solid #AA00AA;
     box-sizing: border-box;
 }
+.draggable {
+    cursor: move;
+}
+.dragging {
+    opacity: 0.5;
+}
