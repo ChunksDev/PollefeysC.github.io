@@ -18,6 +18,8 @@ let whitelist = [
     "9df4ea03fa8685917669aee1cc30d4b6",
     //Trickly
     "459a8657f2500d2a0b5c7b9b430c5555",
+    //Ghostly
+    "ab29a773ed853f4a584758b144932899",
     //PAID
     //Vetiver (twitter)
     "392afaae0f1457dc5a22b995522a94f1",
