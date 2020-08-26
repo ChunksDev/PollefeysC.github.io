@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f3bc683-8fc3-45fd-ae26-3409974e4485" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/livestats/livestats.js" beforeDir="false" afterPath="$PROJECT_DIR$/livestats/livestats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/livestats/collapse.js" beforeDir="false" afterPath="$PROJECT_DIR$/livestats/collapse.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +70,7 @@
       <workItem from="1598257698931" duration="22674000" />
       <workItem from="1598302046459" duration="51000" />
       <workItem from="1598337822555" duration="32370000" />
-      <workItem from="1598442224763" duration="9241000" />
+      <workItem from="1598442224763" duration="10120000" />
     </task>
     <servers />
   </component>

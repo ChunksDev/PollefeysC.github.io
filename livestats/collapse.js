@@ -1,11 +1,11 @@
 function initCollapse() {
     let sessionCollapse = document.getElementById("session");
-    sessionCollapse.addEventListener("click", () => {
+    sessionCollapse.getElementsByTagName("IMG").item(0).addEventListener("click", () => {
         let children = sessionCollapse.getElementsByTagName("SECTION");
         collapse(children);
     });
     let gameHistoryCollapse = document.getElementById("lastGame");
-    gameHistoryCollapse.addEventListener("click", () => {
+    gameHistoryCollapse.getElementsByTagName("IMG").item(0).addEventListener("click", () => {
         let children = gameHistoryCollapse.getElementsByTagName("SECTION");
         collapse(children);
     });
