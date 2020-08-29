@@ -32,7 +32,7 @@ let whitelist = [
     //Unfeatured (discord)
     "b0ed8afd00bf42e4aa377b9e8edbc2ef",
     //IrlHamster
-    "3609db11e62d68199c5ca3462527acd4"
+    "bd50a18896ab989c94d918072037c92b"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
