@@ -30,7 +30,9 @@ let whitelist = [
     //SirHingeAlot (discord)
     "8a6e3435d768bd33dd1f927afe9330b3",
     //Unfeatured (discord)
-    "b0ed8afd00bf42e4aa377b9e8edbc2ef"
+    "b0ed8afd00bf42e4aa377b9e8edbc2ef",
+    //IrlHamster
+    "bd50a18896ab989c94d918072037c92b"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
