@@ -100,6 +100,7 @@ function getSessionStartData() {
             initial.set("experience", stats.skywars_experience);
             initial.set("heads", stats.heads);
             initial.set("shard", stats.shard);
+            initial.set("time", stats.time_played);
             initLastGameModule();
         })
 }
@@ -145,6 +146,7 @@ function getSessionCurrentData() {
             current.set("experience", stats.skywars_experience);
             current.set("heads", stats.heads);
             current.set("shard", stats.shard);
+            current.set("time", stats.time_played);
             checkForShardReset();
             if (current.get("losses") != lastLoss) {
                 lastLoss = current.get("losses");
