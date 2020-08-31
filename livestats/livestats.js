@@ -205,6 +205,8 @@ function updateMainSessionVisuals() {
     document.getElementById("hourlyexp").innerHTML = formatNumber(Math.round(statPerHour(current.get("experience")-initial.get("experience"))));
     document.getElementById("hourlyshards").innerHTML = formatNumber(Math.round(statPerHour(current.get("shard")-initial.get("shard")+(opalsGained*20000))));
 
+    document.getElementById("sgameTime").innerHTML = sessionDurationString(current.get("time") - initial.get("time"));
+
     updateProgressBars();
     storeStreaks();
 }
