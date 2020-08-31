@@ -103,6 +103,7 @@ function getSessionStartData() {
             initial.set("heads", stats.heads);
             initial.set("shard", stats.shard);
             initial.set("time", stats.time_played);
+
             initLastGameModule();
         })
 }
@@ -149,6 +150,7 @@ function getSessionCurrentData() {
             current.set("heads", stats.heads);
             current.set("shard", stats.shard);
             current.set("time", stats.time_played);
+            current.set("corruption", calculateCorruption(stats));
             checkForShardReset();
             if (current.get("losses") != lastLoss) {
                 lastLoss = current.get("losses");
@@ -207,6 +209,9 @@ function updateMainSessionVisuals() {
 
     document.getElementById("sgameTime").innerHTML = sessionDurationString((current.get("time") - initial.get("time"))*1000);
 
+    document.getElementById("corruption").innerHTML = current.get("corruption") + "%";
+    document.getElementById("scorruption").innerHTML = "(" + sessionCorruptChance() + ")";
+
     updateProgressBars();
     storeStreaks();
 }
@@ -216,6 +221,30 @@ function checkForShardReset() {
         opalsGained += 1;
     }
     recentShards = current.get("shard");
+}
+
+function sessionCorruptChance() {
+    let corruptionTotal = 0;
+    for (let i = 0; i < corruptionHistory.length; i++) {
+        if (corruptionHistory[i]) {
+            corruptionTotal++;
+        }
+    }
+    if (corruptionHistory.length == 0) {
+        return "0%";
+    }
+    return corruptionTotal/corruptionHistory.length*100 + "%";
+}
+
+function calculateCorruption(stats) {
+    let totalChance = stats.angel_of_death_level;
+    if (stats.packages.includes("favor_of_the_angel")) {
+        totalChance++;
+    }
+    if (stats.angels_offering == 1) {
+        totalChance++;
+    }
+    return totalChance;
 }
 
 function sessionDuration() {
