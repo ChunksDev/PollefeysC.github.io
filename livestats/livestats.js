@@ -103,6 +103,7 @@ function getSessionStartData() {
             initial.set("heads", stats.heads);
             initial.set("shard", stats.shard);
             initial.set("time", stats.time_played);
+            initial.set("opals", stats.opals);
 
             initLastGameModule();
         })
@@ -151,6 +152,7 @@ function getSessionCurrentData() {
             current.set("shard", stats.shard);
             current.set("time", stats.time_played);
             current.set("corruption", calculateCorruption(stats));
+            current.set("opals", stats.opals);
             checkForShardReset();
             if (current.get("losses") != lastLoss) {
                 lastLoss = current.get("losses");
@@ -195,6 +197,8 @@ function updateMainSessionVisuals() {
 
     document.getElementById("shards").innerHTML = formatNumber(current.get("shard"));
         document.getElementById("sshards").innerHTML = "(+" + formatNumber((current.get("shard")-initial.get("shard")+(opalsGained*20000)).toString()) + ")";
+
+    document.getElementById("opals").innerHTML = current.get("opals");
 
     document.getElementById("winstreak").innerHTML = formatNumber(getWinstreak());
     document.getElementById("killstreak").innerHTML = formatNumber(getKillstreak());
