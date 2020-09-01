@@ -214,7 +214,7 @@ function updateMainSessionVisuals() {
     document.getElementById("sgameTime").innerHTML = sessionDurationString((current.get("time") - initial.get("time"))*1000);
 
     document.getElementById("corruption").innerHTML = current.get("corruption") + "%";
-    document.getElementById("scorruption").innerHTML = "(" + Math.round(sessionCorruptChance()) + ")";
+    document.getElementById("scorruption").innerHTML = "(" + Math.round(sessionCorruptChance()) + "%)";
 
     updateProgressBars();
     storeStreaks();
@@ -235,9 +235,9 @@ function sessionCorruptChance() {
         }
     }
     if (corruptionHistory.length == 0) {
-        return "0%";
+        return 0;
     }
-    return corruptionTotal/corruptionHistory.length*100 + "%";
+    return corruptionTotal/corruptionHistory.length*100;
 }
 
 function calculateCorruption(stats) {
