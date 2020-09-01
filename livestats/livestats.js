@@ -214,7 +214,7 @@ function updateMainSessionVisuals() {
     document.getElementById("sgameTime").innerHTML = sessionDurationString((current.get("time") - initial.get("time"))*1000);
 
     document.getElementById("corruption").innerHTML = current.get("corruption") + "%";
-    document.getElementById("scorruption").innerHTML = "(" + sessionCorruptChance() + ")";
+    document.getElementById("scorruption").innerHTML = "(" + Math.round(sessionCorruptChance()) + ")";
 
     updateProgressBars();
     storeStreaks();
