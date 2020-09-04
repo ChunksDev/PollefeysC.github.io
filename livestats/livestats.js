@@ -32,13 +32,17 @@ let whitelist = [
     //Unfeatured (discord)
     "b0ed8afd00bf42e4aa377b9e8edbc2ef",
     //IrlHamster
-    "bd50a18896ab989c94d918072037c92b"
+    "bd50a18896ab989c94d918072037c92b",
+    //yqm
+    "d55e21dfa356fe05469e9ca3a2c82a55"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
 let apikey = null;
 let initial = new Map();
+let initialStats = null;
 let current = new Map();
+let currentStats = null;
 let continueSession = true;
 let sessionTime = 0;
 
@@ -105,6 +109,8 @@ function getSessionStartData() {
             initial.set("time", stats.time_played);
             initial.set("opals", stats.opals);
 
+            initialStats = stats;
+
             initLastGameModule();
         })
 }
@@ -142,6 +148,7 @@ function getSessionCurrentData() {
         .then(result => result.json())
         .then(({ player }) => {
             let stats = player.stats.SkyWars;
+            currentStats = stats;
             current.set("wins", stats.wins);
             current.set("losses", stats.losses);
             current.set("kills", stats.kills);
@@ -199,6 +206,7 @@ function updateMainSessionVisuals() {
         document.getElementById("sshards").innerHTML = "(+" + formatNumber((current.get("shard")-initial.get("shard")+(opalsGained*20000)).toString()) + ")";
 
     document.getElementById("opals").innerHTML = current.get("opals");
+    document.getElementById("sopals").innerHTML = "(+" + opalsGained + ")";
 
     document.getElementById("winstreak").innerHTML = formatNumber(getWinstreak());
     document.getElementById("killstreak").innerHTML = formatNumber(getKillstreak());

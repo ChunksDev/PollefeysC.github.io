@@ -42,6 +42,9 @@ h1, h2, h3, h4 {
 #sshards, #lgShards {
     color: #55FFFF;
 }
+#sopals {
+    color: #5555FF;
+}
 .subsession {
     justify-self: center;
     width: 100%;
@@ -81,6 +84,7 @@ h1, h2, h3, h4 {
 }
 #xpbarprogress, #shardsbarprogress {
     width: 0;
+    max-width: 100%;
     height: 30px;
 }
 #xpbartext, #shardsbartext {

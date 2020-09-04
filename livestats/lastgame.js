@@ -5,7 +5,10 @@ let killHistory = [];
 let corruptionHistory = [];
 
 let previousWins, previousLosses, previousKills, previousDeaths, previousExperience, previousCoins, previousHeads, previousShards;
+let previousEww, previousYucky, previousMeh, previousDecent, previousSalty, previousTasty, previousSucculent, previousDivine, previousHeavenly, previousSweet;
+
 let lastGameWins, lastGameLosses, lastGameKills, lastGameDeaths, lastGameExperience, lastGameCoins, lastGameHeads, lastGameShards;
+let lastGameEww, lastGameYucky, lastGameMeh, lastGameDecent, lastGameSalty, lastGameTasty, lastGameSucculent, lastGameDivine, lastGameHeavenly, lastGameSweet;
 
 function initLastGameModule() {
     gamesPlayed = initial.get("wins")+initial.get("losses");
@@ -17,6 +20,7 @@ function initLastGameModule() {
     previousCoins = initial.get("coins");
     previousHeads = initial.get("heads");
     previousShards = initial.get("shard");
+    initHeads();
 }
 
 function checkFinishedGame() {
@@ -31,6 +35,8 @@ function checkFinishedGame() {
         lastGameCoins = current.get("coins") - previousCoins;
         lastGameHeads = current.get("heads") - previousHeads;
         lastGameShards = current.get("shard") - previousShards;
+
+        lastGameDetailedHeads();
 
         resultHistory[resultHistory.length] = lastGameWins > 0;
         killHistory[killHistory.length] = lastGameKills;
@@ -83,4 +89,30 @@ function updateGameGridVisuals() {
         }
         gameGrid.innerHTML = killHistory[killHistory.length-1];
         document.getElementById("gameGrid").appendChild(gameGrid);
+}
+
+function initHeads() {
+    previousEww = initialStats.heads_eww;
+    previousYucky = initialStats.heads_yucky;
+    previousMeh = initialStats.heads_meh;
+    previousDecent = initialStats.heads_decent;
+    previousSalty = initialStats.heads_salty;
+    previousTasty = initialStats.heads_tasty;
+    previousSucculent = initialStats.heads_succulent;
+    previousDivine = initialStats.heads_divine;
+    previousHeavenly = initialStats.heads_heavenly;
+    previousSweet = initialStats.heads_sweet;
+}
+
+function lastGameDetailedHeads() {
+    lastGameEww = currentStats.heads_eww - previousEww;
+    lastGameYucky = currentStats.heads_yucky - previousYucky;
+    lastGameMeh = currentStats.heads_meh - previousMeh;
+    lastGameDecent = currentStats.heads_decent - previousDecent;
+    lastGameSalty = currentStats.heads_salty - previousSalty;
+    lastGameTasty = currentStats.heads_tasty - previousTasty;
+    lastGameSucculent = currentStats.heads_succulent - previousSucculent;
+    lastGameDivine = currentStats.heads_divine - previousDivine;
+    lastGameHeavenly = currentStats.heads_heavenly - previousHeavenly;
+    lastGameSweet = currentStats.heads_sweet - previousSweet;
 }
