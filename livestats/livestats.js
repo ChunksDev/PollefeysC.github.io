@@ -34,7 +34,9 @@ let whitelist = [
     //IrlHamster
     "bd50a18896ab989c94d918072037c92b",
     //yqm
-    "d55e21dfa356fe05469e9ca3a2c82a55"
+    "d55e21dfa356fe05469e9ca3a2c82a55",
+    //solike
+    "bcc54f06239ca6ee8de420451e121d8a"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
