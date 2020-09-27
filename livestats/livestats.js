@@ -36,7 +36,9 @@ let whitelist = [
     //yqm
     "d55e21dfa356fe05469e9ca3a2c82a55",
     //solike
-    "bcc54f06239ca6ee8de420451e121d8a"
+    "bcc54f06239ca6ee8de420451e121d8a",
+    //dhil
+    "6e656ff8dd16afd50334c65f96ad055f"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
