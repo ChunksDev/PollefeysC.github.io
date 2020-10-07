@@ -38,7 +38,9 @@ let whitelist = [
     //solike
     "bcc54f06239ca6ee8de420451e121d8a",
     //dhil
-    "6e656ff8dd16afd50334c65f96ad055f"
+    "6e656ff8dd16afd50334c65f96ad055f",
+    //wessel
+    "2c5bdb8c00a1a63ae1666559c7c38b2e"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
