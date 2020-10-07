@@ -40,7 +40,7 @@ let whitelist = [
     //dhil
     "6e656ff8dd16afd50334c65f96ad055f",
     //wessel
-    "2c5bdb8c00a1a63ae1666559c7c38b2e"
+    "b25b472847df1523f6c4fcb0e4d6ab6a"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
