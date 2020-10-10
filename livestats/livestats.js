@@ -40,7 +40,9 @@ let whitelist = [
     //dhil
     "6e656ff8dd16afd50334c65f96ad055f",
     //wessel
-    "b25b472847df1523f6c4fcb0e4d6ab6a"
+    "b25b472847df1523f6c4fcb0e4d6ab6a",
+    //sweatymeme
+    "5095f662619523e46c6a8ecfa6755aa4"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
