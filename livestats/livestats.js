@@ -42,7 +42,7 @@ let whitelist = [
     //wessel
     "b25b472847df1523f6c4fcb0e4d6ab6a",
     //sweatymeme
-    "5095f662619523e46c6a8ecfa6755aa4"
+    "5095f662619523e46c6a8ecfa6755aa4",
     //asap rocky superfan (discord)
     "2bf371268d684d684e1ea19527651b5e"
 ];
