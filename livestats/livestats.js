@@ -9,6 +9,8 @@ let whitelist = [
     "5e7c9aca54bbc93e41afc804972ea7e4",
     //espenode
     "4ae43fa1ef9c94257ae8c7703eb4ea12",
+    //solike
+    "bcc54f06239ca6ee8de420451e121d8a",
     //BETA TESTER
     //virmah
     "6f687b16e475b734acedb54c51244ff2",
@@ -20,6 +22,8 @@ let whitelist = [
     "459a8657f2500d2a0b5c7b9b430c5555",
     //Ghostly
     "ab29a773ed853f4a584758b144932899",
+    //A0E
+    "c3f0479881cd66350840b3ca0bdbb145",
     //PAID
     //Vetiver (twitter)
     "392afaae0f1457dc5a22b995522a94f1",
@@ -35,8 +39,6 @@ let whitelist = [
     "bd50a18896ab989c94d918072037c92b",
     //yqm
     "d55e21dfa356fe05469e9ca3a2c82a55",
-    //solike
-    "bcc54f06239ca6ee8de420451e121d8a",
     //dhil
     "6e656ff8dd16afd50334c65f96ad055f",
     //wessel
