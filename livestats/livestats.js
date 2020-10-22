@@ -77,6 +77,7 @@ function runLiveStats() {
     } else {
         document.getElementById("session").style.display = "none";
         document.getElementById("lastGame").style.display = "none";
+        document.getElementById("currentMap").style.display = "none";
     }
 }
 
@@ -88,6 +89,7 @@ function initStats() {
             document.getElementsByTagName("H4").item(0).innerHTML = "You're <strong>1</strong> out of <strong>" + whitelist.length + "</strong> whitelisted players";
             getSessionStartData();
             sessionLoop();
+            mapLoop();
             sessionTime = Date.now();
             sessionClock();
             sessionGa();
@@ -132,6 +134,14 @@ async function sessionLoop() {
     await wait(2000);
     if (continueSession){
         await sessionLoop();
+    }
+}
+
+async function mapLoop() {
+    updateCurrentMap();
+    await wait(5000);
+    if (continueSession) {
+        await mapLoop();
     }
 }
 

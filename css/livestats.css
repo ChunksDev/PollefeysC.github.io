@@ -20,7 +20,7 @@ h1, h2, h3, h4 {
             ". left middle . right ."
             ". bottom bottom bottom bottom .";
 }
-#session, #lastGame {
+#session, #lastGame, #currentMap {
     border: 1px solid #e2e2e2;
     margin: 0 10% 20px;
 }
@@ -185,8 +185,14 @@ h2 img {
     top: 0;
     cursor: pointer;
 }
-#session section, #lastGame section {
+#session section, #lastGame section, #currentMap section {
     display: block;
-}#middle h2 {
+}
+
+#middle h2 {
     cursor: default;
- }
+}
+
+#mapImage {
+    max-width: 60%;
+}

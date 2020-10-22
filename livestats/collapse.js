@@ -9,6 +9,11 @@ function initCollapse() {
         let children = gameHistoryCollapse.getElementsByTagName("SECTION");
         collapse(children);
     });
+    let currentMapCollapse = document.getElementById("currentMap");
+    currentMapCollapse.getElementsByTagName("IMG").item(0).addEventListener("click", () => {
+        let children = currentMapCollapse.getElementsByTagName("SECTION");
+        collapse(children);
+    });
 }
 
 function collapse(children) {

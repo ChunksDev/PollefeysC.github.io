@@ -19,6 +19,7 @@
     <script src="lastgame.js"></script>
     <script src="draggable.js"></script>
     <script src="collapse.js"></script>
+    <script src="currentmap.js"></script>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/livestats.css">
     <link rel="../apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
@@ -48,7 +49,7 @@
             <p id="betaList">
                 Top 10 SkyWars Players (Overall) <br>
                 <strong>OR</strong><br>
-                Beta Testers <br>
+                Beta Testers (5 euros)<br>
                 <strong>OR</strong><br>
                 Influencers in the Community (YT/Twitter/Discord) <br>
                 <strong>OR</strong><br>
@@ -137,6 +138,15 @@
             <section id="gameGrid">
 
             </section>
+        </section>
+    </section>
+    <section id="currentMap" class="draggable" draggable="false">
+        <h2 draggable="true">Current Map
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAABmJLR0QA/wD/AP+gvaeTAAACaElEQVRoge2XvWsUQRjGf+8g5Pw4UDCKmLuNJoXm/gELU/iVQtObUiHYpRXE3sLCxs5CG7EUTWNhkUIQCxsLETkMmdklGIIWCXJw5ua18ALxuMjt7GqumF85O8/zvs+8e7u3EIlEIpFIJBKJRIYcVRVr7dT6+np1L/swZZisrKxcS9O0KSIfW63WhyzLzpXhG0LhQM65m8aYRWCiu3TKe/8mTdOFot4hSBGxtfa8iCwB+/qaizza2NhYaDQa7SJ18lB0Qg/ZJQyAqt6qVquvV1dXjxasMzDBE0rTdFJVmwNuX/bez46Pj3/qd9Fae1lEngLfjTHTY2Nj30L7Cp5QpVJZA74MuP20MeattfZS7wVr7RURWQSOA2e993OhPUGBQKOjo5vAHDDo7+OwiLxK03R+e8E5NyMiL4H9O/ZNhfYEBR8KAM65G8CTPBpVvW+MWVLV5/wZBlVdSpLkYmg/hQMBOOfuAXdyynSX+sv1en2iz/pAlPJirdVqd4FnOWW7HeZJVQ0+6FICiYiKyDzwrgS7kSzLjoSKSwkEUKvVWsaYWVX9XNTLGHMwWFu0+E6674+rwFoRn3a7PRyBAJIkWQZmgR+hHkMzoW3q9fp77/11YCtELyIHQmv/k0AAxpifBAai592Uq26o8G8452aAF0AlRN89jCBKD7QjTPApdzqd4M+NUgNlWXYB6P1vlpuhmVCn03lA4G3W47MZqi01kIj0/d4J8PkarC2jgW1U1WRZNu29PyMik0AdOKGqx7qP4kP8nmDvLbkFbAJeVR8nSXK7zL7+C81mc2Sve4hEIpFIJBKJRCJ5+AXdcsBu2etSSgAAAABJRU5ErkJggg==" draggable="false">
+        </h2>
+        <section>
+            <h3 id="playerMap">Map</h3>
+            <img src="../media/aegis.png" id="mapImage">
         </section>
     </section>
 </main>
