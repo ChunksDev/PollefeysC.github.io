@@ -15,3 +15,5 @@ To use the website, your API key is needed. The key also needs to be whitelisted
 The main core of the session tracker are of course the main session stats, found in the 'session' tab. These includes stats like wins or kills but also shards and heads. Behind these stats you can also find how much of the stat you have gained that session alone. There's also a clock to keep track of time and some progress bars that allow you to see your progress towards your next opal or level at any given time.
 ### Game History
 In this tab you can find a bit more info about individual games you've had this session. You can find a summary of your last game as well as a grid that includes every game you've played this session. Every game is color coded red or green for victory, has a purple border of corrupted and shows the kills you got in it.
+### Current Map
+The current map is a premade map image that is loaded in based on which map the API detects you on. It shows where chests, anvils, enchantment tables and player spawns are. This can all be helpful to see while playing the game, but is purely static once loaded.
