@@ -57,7 +57,7 @@ function updateCurrentMap() {
                 case "Railroad":
                     mapImage.src = "../media/railroad.png";
                     break;
-                case "Shao Hao":
+                case "Shaohao":
                     mapImage.src = "../media/shaohao.png";
                     break;
                 case "Shire":
