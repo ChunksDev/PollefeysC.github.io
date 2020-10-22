@@ -23,7 +23,9 @@ let whitelist = [
     //Ghostly
     "ab29a773ed853f4a584758b144932899",
     //A0E
-    "79094650ded61b1c5d8d1ec245cde613\n",
+    "79094650ded61b1c5d8d1ec245cde613",
+    //kyro
+    "342bd3b2c6e4f2801dab06bd49ef8895",
     //PAID
     //Vetiver (twitter)
     "392afaae0f1457dc5a22b995522a94f1",

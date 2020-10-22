@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f3bc683-8fc3-45fd-ae26-3409974e4485" name="Default Changelist" comment="">
+    <list default="true" id="7f3bc683-8fc3-45fd-ae26-3409974e4485" name="Default Changelist" comment="Shaohao map update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/livestats/currentmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/livestats/currentmap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/livestats/livestats.js" beforeDir="false" afterPath="$PROJECT_DIR$/livestats/livestats.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +21,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Cedric &lt;cedric.pollefeys@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1gQ9coe3cLAC8n1deXJAIhCmxEC" />
@@ -89,8 +94,17 @@
       <workItem from="1603285788689" duration="140000" />
       <workItem from="1603354575963" duration="983000" />
       <workItem from="1603357483810" duration="73000" />
-      <workItem from="1603357626182" duration="238000" />
+      <workItem from="1603357626182" duration="507000" />
+      <workItem from="1603381122517" duration="1429000" />
     </task>
+    <task id="LOCAL-00001" summary="Shaohao map update">
+      <created>1603357926392</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603357926392</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,5 +122,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Shaohao map update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shaohao map update" />
   </component>
 </project>
