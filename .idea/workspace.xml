@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f3bc683-8fc3-45fd-ae26-3409974e4485" name="Default Changelist" comment="Shaohao map update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/livestats/livestats.js" beforeDir="false" afterPath="$PROJECT_DIR$/livestats/livestats.js" afterDir="false" />
-    </list>
+    <list default="true" id="7f3bc683-8fc3-45fd-ae26-3409974e4485" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +92,7 @@
       <workItem from="1603354575963" duration="983000" />
       <workItem from="1603357483810" duration="73000" />
       <workItem from="1603357626182" duration="507000" />
-      <workItem from="1603381122517" duration="1429000" />
+      <workItem from="1603381122517" duration="2100000" />
     </task>
     <task id="LOCAL-00001" summary="Shaohao map update">
       <created>1603357926392</created>
@@ -104,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603357926392</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="kyro added">
+      <created>1603385515301</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603385515301</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +129,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Shaohao map update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shaohao map update" />
+    <MESSAGE value="kyro added" />
+    <option name="LAST_COMMIT_MESSAGE" value="kyro added" />
   </component>
 </project>
