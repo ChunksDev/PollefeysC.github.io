@@ -21,6 +21,9 @@ function updateCurrentMap() {
                 case "Elven":
                     mapImage.src = "../media/elven.png";
                     break;
+                case "Jinzhou":
+                    mapImage.src = "../media/jinzhou.png";
+                    break;
                 case "Entangled":
                     mapImage.src = "../media/entangled.png";
                     break;
@@ -77,6 +80,9 @@ function updateCurrentMap() {
                     break;
                 case "Winterhelm":
                     mapImage.src = "../media/winterhelm.png";
+                    break;
+                case "Waterways":
+                    mapImage.src = "../media/waterways.png";
                     break;
                 case "Witch's Brew":
                     mapImage.src = "../media/witchsbrew.png";
