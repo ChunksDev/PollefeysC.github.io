@@ -48,7 +48,9 @@ let whitelist = [
     //sweatymeme
     "5095f662619523e46c6a8ecfa6755aa4",
     //asap rocky superfan (discord)
-    "2bf371268d684d684e1ea19527651b5e"
+    "2bf371268d684d684e1ea19527651b5e",
+    //crowded
+    "622e6bbe04f3a28d8fe56f697f630a61"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
