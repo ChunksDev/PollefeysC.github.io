@@ -52,7 +52,9 @@ let whitelist = [
     //crowded
     "622e6bbe04f3a28d8fe56f697f630a61",
     //meaniehead
-    "40a31a2cd8da0448d2bbfe579e701173"
+    "40a31a2cd8da0448d2bbfe579e701173",
+    //laurie
+    "f15533ff3c6d0a0c61f3866f7fd19e19"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
