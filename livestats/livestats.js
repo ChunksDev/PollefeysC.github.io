@@ -50,7 +50,9 @@ let whitelist = [
     //asap rocky superfan (discord)
     "2bf371268d684d684e1ea19527651b5e",
     //crowded
-    "622e6bbe04f3a28d8fe56f697f630a61"
+    "622e6bbe04f3a28d8fe56f697f630a61",
+    //meaniehead
+    "40a31a2cd8da0448d2bbfe579e701173"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
