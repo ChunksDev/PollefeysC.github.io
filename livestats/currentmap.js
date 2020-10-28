@@ -87,6 +87,16 @@ function updateCurrentMap() {
                 case "Witch's Brew":
                     mapImage.src = "../media/witchsbrew.png";
                     break;
+
+                case "Finale":
+                    mapImage.src = "../media/final.jpg";
+                    break;
+                case "Northern":
+                    mapImage.src = "../media/northern.jpg";
+                    break;
+                case "Templar":
+                    mapImage.src = "../media/templar.jpg";
+                    break;
                 default:
                     mapImage.src = "";
             }
