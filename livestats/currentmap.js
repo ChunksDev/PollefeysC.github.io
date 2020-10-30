@@ -34,7 +34,7 @@ function updateCurrentMap() {
                     mapImage.src = "../media/hibiscus.png";
                     break;
                 case "Martian":
-                    mapImage.src = "../media/Martian.png";
+                    mapImage.src = "../media/martian.png";
                     break;
                 case "Memorial":
                     mapImage.src = "../media/memorial.png";
