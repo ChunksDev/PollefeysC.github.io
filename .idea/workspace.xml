@@ -100,6 +100,7 @@
       <workItem from="1603907336167" duration="157000" />
       <workItem from="1603914876356" duration="277000" />
       <workItem from="1603915512166" duration="1594000" />
+      <workItem from="1603919324538" duration="709000" />
     </task>
     <task id="LOCAL-00001" summary="Shaohao map update">
       <created>1603357926392</created>
@@ -164,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603917658552</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="mega rotation 1 added">
+      <created>1603919429248</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1603919429248</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
