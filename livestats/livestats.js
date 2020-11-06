@@ -17,7 +17,7 @@ let whitelist = [
     //updation
     "f26e95e4a8020a0235e41843bc695891",
     //reeedly
-    "9df4ea03fa8685917669aee1cc30d4b6",
+    "47468c52844fa2eb884883b4b1107288",
     //Trickly
     "459a8657f2500d2a0b5c7b9b430c5555",
     //Ghostly
