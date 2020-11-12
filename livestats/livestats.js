@@ -56,7 +56,9 @@ let whitelist = [
     //laurie
     "f15533ff3c6d0a0c61f3866f7fd19e19",
     //derek
-    "5272549d972ae5d681c2398df5064698"
+    "5272549d972ae5d681c2398df5064698",
+    //Halaiksse
+    "c454b4f67aadefefd357be862a56cbeb"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
