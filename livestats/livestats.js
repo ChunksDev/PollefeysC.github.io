@@ -62,7 +62,7 @@ let whitelist = [
     //zen
     "cfb885c3cc57a0a1e28de495e7b0315c",
     //scyno
-    "50af824bfeb1e12b2d3606923e204ee3"
+    "6735cfb415a03fd1e639f5afd3daba14"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
