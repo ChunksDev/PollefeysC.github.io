@@ -60,7 +60,9 @@ let whitelist = [
     //Halaiksse
     "c454b4f67aadefefd357be862a56cbeb",
     //zen
-    "cfb885c3cc57a0a1e28de495e7b0315c"
+    "cfb885c3cc57a0a1e28de495e7b0315c",
+    //scyno
+    "50af824bfeb1e12b2d3606923e204ee3"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
