@@ -6,7 +6,7 @@ let whitelist = [
     //chqv
     "46ad38343094f4ee2ad80bd045123f16",
     //Swkills
-    "5e7c9aca54bbc93e41afc804972ea7e4",
+    "28e3ff4281848e109e8ebce44bd53b1c",
     //espenode
     "4ae43fa1ef9c94257ae8c7703eb4ea12",
     //solike
