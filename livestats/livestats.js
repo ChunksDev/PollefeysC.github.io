@@ -60,7 +60,7 @@ let whitelist = [
     //Halaiksse
     "c454b4f67aadefefd357be862a56cbeb",
     //zen
-    "cfb885c3cc57a0a1e28de495e7b0315c",
+    "50982ae2d987b22f20bca9ff55010c6f",
     //scyno
     "6735cfb415a03fd1e639f5afd3daba14",
     //zen (alt)
