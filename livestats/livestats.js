@@ -66,7 +66,7 @@ let whitelist = [
     //zen (alt)
     "9ff15eb4c3fe51cc594f86a790e62cec",
     //glisters
-    "b6b9d72e-ae05-4547-8845-56b5e3589c08"
+    "13d3ea22ebe949cdbcd581b13c964038"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
