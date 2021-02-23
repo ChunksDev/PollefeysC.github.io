@@ -25,7 +25,7 @@ let whitelist = [
     //A0E
     "79094650ded61b1c5d8d1ec245cde613",
     //kyro
-    "56d70072fb90ad08470a300365d41cbc",
+    "8b7f37bd585d54cdbc555f0cb39eef2b",
     //PAID
     //Vetiver (twitter)
     "392afaae0f1457dc5a22b995522a94f1",
