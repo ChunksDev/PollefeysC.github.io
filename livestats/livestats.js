@@ -30,7 +30,7 @@ let whitelist = [
     "703f26d0425426e200d51c9d142aa994",
     //PAID
     //Vetiver (twitter)
-    "392afaae0f1457dc5a22b995522a94f1",
+    "d0bfb4b1141158ede2e9ba7694e01ed9",
     //JT/Squat (discord)
     "bb531d86625bfb1351b1d49102c8a80a",
     //suika (discord)
