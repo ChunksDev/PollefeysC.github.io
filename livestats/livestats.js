@@ -13,7 +13,7 @@ let whitelist = [
     "bcc54f06239ca6ee8de420451e121d8a",
     //BETA TESTER
     //virmah
-    "b59c8219fd3aad79aa27946509c3ddd5",
+    "3fce4d50ad3c1107aff027ec63fbf555",
     //updation
     "f26e95e4a8020a0235e41843bc695891",
     //reeedly
