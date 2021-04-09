@@ -70,7 +70,9 @@ let whitelist = [
     //glisters
     "13d3ea22ebe949cdbcd581b13c964038",
     //skyne
-    "a8510e31cc77937faa96f0b2f588a4fd"
+    "a8510e31cc77937faa96f0b2f588a4fd",
+    //caoy
+    "070aed4d9141e2b0609dcae3358a1338"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
