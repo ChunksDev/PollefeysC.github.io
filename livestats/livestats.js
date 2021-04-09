@@ -25,7 +25,7 @@ let whitelist = [
     //A0E
     "79094650ded61b1c5d8d1ec245cde613",
     //kyro
-    "8b7f37bd585d54cdbc555f0cb39eef2b",
+    "dc9814cb3d72b6989206524723a85ea2",
     //shmeado
     "703f26d0425426e200d51c9d142aa994",
     //PAID
