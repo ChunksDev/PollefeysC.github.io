@@ -72,7 +72,9 @@ let whitelist = [
     //skyne
     "a8510e31cc77937faa96f0b2f588a4fd",
     //caoy
-    "070aed4d9141e2b0609dcae3358a1338"
+    "070aed4d9141e2b0609dcae3358a1338",
+    //duppy
+    "178bbe693da5089c67657b0d180d395d"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
