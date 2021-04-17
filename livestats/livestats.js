@@ -72,7 +72,7 @@ let whitelist = [
     //skyne
     "a8510e31cc77937faa96f0b2f588a4fd",
     //caoy
-    "070aed4d9141e2b0609dcae3358a1338",
+    "95434b4bc4adac0b178783f6d0066ad8",
     //duppy
     "178bbe693da5089c67657b0d180d395d"
 ];
