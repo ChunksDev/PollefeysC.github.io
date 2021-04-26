@@ -11,6 +11,8 @@ let whitelist = [
     "4ae43fa1ef9c94257ae8c7703eb4ea12",
     //solike
     "bcc54f06239ca6ee8de420451e121d8a",
+    //thuntree
+    "06762fd7df5aaed0bbc9d3434454fff0",
     //BETA TESTER
     //virmah
     "3fce4d50ad3c1107aff027ec63fbf555",
