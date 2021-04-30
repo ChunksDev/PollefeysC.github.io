@@ -70,7 +70,7 @@ let whitelist = [
     //zen (alt)
     "9ff15eb4c3fe51cc594f86a790e62cec",
     //glisters
-    "13d3ea22ebe949cdbcd581b13c964038",
+    "25edd4200f1b7a86d815c9bde82415b9",
     //skyne
     "a8510e31cc77937faa96f0b2f588a4fd",
     //caoy
