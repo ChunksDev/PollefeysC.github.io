@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f3bc683-8fc3-45fd-ae26-3409974e4485" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/randomnick/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/livestats/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/livestats/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,9 +16,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -106,7 +108,10 @@
       <workItem from="1603919324538" duration="709000" />
       <workItem from="1604072481226" duration="258000" />
       <workItem from="1604074158066" duration="59000" />
-      <workItem from="1604154438549" duration="701000" />
+      <workItem from="1604154438549" duration="968000" />
+      <workItem from="1605048517038" duration="869000" />
+      <workItem from="1620734000226" duration="2255000" />
+      <workItem from="1620741846852" duration="3958000" />
     </task>
     <task id="LOCAL-00001" summary="Shaohao map update">
       <created>1603357926392</created>
@@ -192,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604074193543</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="solo /who legend added">
+      <created>1604155402831</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1604155402831</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +231,7 @@
     <MESSAGE value="laurie" />
     <MESSAGE value="mega rotation 1 added" />
     <MESSAGE value="derek added" />
-    <option name="LAST_COMMIT_MESSAGE" value="derek added" />
+    <MESSAGE value="solo /who legend added" />
+    <option name="LAST_COMMIT_MESSAGE" value="solo /who legend added" />
   </component>
 </project>
