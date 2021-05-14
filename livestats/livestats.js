@@ -13,6 +13,8 @@ let whitelist = [
     "bcc54f06239ca6ee8de420451e121d8a",
     //thuntree
     "06762fd7df5aaed0bbc9d3434454fff0",
+    //disco
+    "b302d7dd52e61eac04c10dd3f7c6155b",
     //BETA TESTER
     //virmah
     "3fce4d50ad3c1107aff027ec63fbf555",
