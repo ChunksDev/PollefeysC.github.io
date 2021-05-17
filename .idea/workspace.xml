@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f3bc683-8fc3-45fd-ae26-3409974e4485" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/randomnick/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Cedric.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/randomnick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/randomnick/phonetic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/randomnick/randomnick.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/livestats/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/livestats/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/randomnick/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/randomnick/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -35,8 +37,11 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jsx.switch.disabled" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/livestats" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -112,6 +117,10 @@
       <workItem from="1605048517038" duration="869000" />
       <workItem from="1620734000226" duration="2255000" />
       <workItem from="1620741846852" duration="3958000" />
+      <workItem from="1620818866372" duration="1246000" />
+      <workItem from="1620975240188" duration="2103000" />
+      <workItem from="1621076292896" duration="12648000" />
+      <workItem from="1621233739336" duration="12428000" />
     </task>
     <task id="LOCAL-00001" summary="Shaohao map update">
       <created>1603357926392</created>
@@ -224,6 +233,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Shaohao map update" />
     <MESSAGE value="kyro added" />
     <MESSAGE value="jinzhou waterways added" />
