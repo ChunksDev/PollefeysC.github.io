@@ -11,10 +11,10 @@ const vowelSoundsT2 = [
 ];
 
 const consonantSoundsT1 = [
-    'b','d','k','l','m','n','p','r','s','t'
+    'd','l','m','n','p','r','s','t'
 ];
 const consonantSoundsT2 = [
-    'c','f','g','h','j','v','w','x','z',
+    'b','c','f','g','h','j','k','v','w','x','z',
     'st','ck','sh','kn'
 ];
 
@@ -55,7 +55,7 @@ function buildSyllable(lastCharVowel) {
             syllable += randomSound(vowelSoundsT2);
         }
         //coinflip for extra consonant
-        if (!heavyTrueCoinFlip()) {
+        if (!coinFlip()) {
             //consonant
             if (heavyTrueCoinFlip()) {
                 syllable += randomSound(consonantSoundsT1);
@@ -68,6 +68,10 @@ function buildSyllable(lastCharVowel) {
 }
 
 function postProcess(word) {
+    //if word is too short, add extra random syllable at end
+    if (word.length < 5) {
+        word += buildSyllable(isLastCharVowel(word));
+    }
     //fix late oi to oy
     if (word.slice(-2) === 'oi') {
         word = replaceLast('oi', 'oy', word);
@@ -88,7 +92,7 @@ function postProcess(word) {
     if (coinFlip()) {
         word = word.charAt(0).toUpperCase() + word.slice(1);
         //small chance to give x or z at start
-        if (!heavyTrueCoinFlip()) {
+        if (!heavyTrueCoinFlip() && word.charAt(0) !== 'I') {
             if (word.charAt(0) !== 'X' && coinFlip()) {
                 word = 'x' + word;
             } else {
@@ -104,10 +108,14 @@ function postProcess(word) {
         if (!heavyTrueCoinFlip()) {
             word = word + Math.floor(Math.random()*10);
         }
-    }
-    //if word is too short, add extra random syllable at end
-    if (word.length < 6) {
-        word += buildSyllable();
+    } else {
+        if (Math.random() < 0.02) {
+            if (coinFlip()) {
+                word = word + "_tw"
+            } else {
+                word = word + "_es"
+            }
+        }
     }
     return word;
 }

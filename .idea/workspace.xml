@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f3bc683-8fc3-45fd-ae26-3409974e4485" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Cedric.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/randomnick.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/randomnick/phonetic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/randomnick/randomnick.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/randomnick.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/randomnick.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/randomnick/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/randomnick/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/randomnick/phonetic.js" beforeDir="false" afterPath="$PROJECT_DIR$/randomnick/phonetic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/randomnick/randomnick.js" beforeDir="false" afterPath="$PROJECT_DIR$/randomnick/randomnick.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,6 +120,7 @@
       <workItem from="1620975240188" duration="2103000" />
       <workItem from="1621076292896" duration="12648000" />
       <workItem from="1621233739336" duration="12428000" />
+      <workItem from="1621262814687" duration="2326000" />
     </task>
     <task id="LOCAL-00001" summary="Shaohao map update">
       <created>1603357926392</created>
