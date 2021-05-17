@@ -67,7 +67,7 @@ function buildSyllable(lastCharVowel) {
     return syllable;
 }
 
-function postProcess(word) {
+async function postProcess(word) {
     //if word is too short, add extra random syllable at end
     if (word.length < 5) {
         word += buildSyllable(isLastCharVowel(word));
@@ -86,13 +86,17 @@ function postProcess(word) {
     }
     //fix early ck
     if (word.charAt(0) === 'c' && word.charAt(1) === 'k') {
-        word = word.replace('ck','c');
+        word = word.replace('ck', 'c');
     }
     //chance to give capital to start of word
     if (coinFlip()) {
         word = word.charAt(0).toUpperCase() + word.slice(1);
+    }
+    let data = await doesPlayerExist(word);
+    if (typeof data.username !== "undefined") {
+        console.log("attempting to add z or x");
         //small chance to give x or z at start
-        if (!heavyTrueCoinFlip() && word.charAt(0) !== 'I') {
+        if (!heavyTrueCoinFlip() && word.charAt(0) !== 'I' && word.charAt(0).toUpperCase() === word.charAt(0)) {
             if (word.charAt(0) !== 'X' && coinFlip()) {
                 word = 'x' + word;
             } else {
@@ -101,21 +105,33 @@ function postProcess(word) {
                 }
             }
         }
-    }
-    //small chance to give 1 or 2 numbers behind the name
-    if (Math.random() < 0.25) {
-        word = word + Math.floor(Math.random()*10);
-        if (!heavyTrueCoinFlip()) {
-            word = word + Math.floor(Math.random()*10);
-        }
     } else {
-        if (Math.random() < 0.02) {
+        return word;
+    }
+    data = await doesPlayerExist(word);
+    //add chance for _tw or _es to be at the end to act like it's a regional name
+    if (typeof data.username !== "undefined") {
+        console.log("attempting to add a language suffix");
+        if (Math.random() < 0.1) {
             if (coinFlip()) {
                 word = word + "_tw"
             } else {
                 word = word + "_es"
             }
         }
+    } else {
+        return word;
+    }
+    data = await doesPlayerExist(word);
+    //add numbers if player still exists
+    if (typeof data.username !== "undefined") {
+        console.log("attempting to add numbers");
+        word = word + Math.floor(Math.random() * 10);
+        if (!heavyTrueCoinFlip()) {
+            word = word + Math.floor(Math.random() * 10);
+        }
+    } else {
+        return word;
     }
     return word;
 }
@@ -161,4 +177,21 @@ function replaceLast(find, replace, string) {
     let endString = string.substring(lastIndex + find.length);
 
     return beginString + replace + endString;
+}
+
+async function doesPlayerExist(word) {
+    /*fetch('https://api.slothpixel.me/api/players/'+word)
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            console.log(data.username);
+            if (data.username !== undefined) {
+                return data.username.toLowerCase() === word.toLowerCase();
+            } else {
+                return false;
+            }
+        });*/
+    const response = await fetch('https://api.slothpixel.me/api/players/' + word);
+    return response.json();
 }

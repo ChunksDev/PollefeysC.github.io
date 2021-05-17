@@ -1,17 +1,17 @@
 //methods of nick gen
-function generateNick() {
+async function generateNick() {
     let nick;
     switch (Math.floor(Math.random())) {
         //random phonetically viable letters
         case 0:
-            nick = generatePhoneticNick();
+            nick = await generatePhoneticNick();
             addNick(nick);
     }
 }
 
 function addNick(generatedNick) {
     let node = document.createElement("H1");
-    let textnode = document.createTextNode(generatedNick);
-    node.appendChild(textnode);
+    let textNode = document.createTextNode(generatedNick);
+    node.appendChild(textNode);
     document.getElementsByTagName("body").item(0).appendChild(node);
 }
