@@ -22,7 +22,7 @@ function generatePhoneticNick() {
     let word = '';
     word += buildSyllable(false);
     word += buildSyllable(isLastCharVowel(word));
-    return postProcess(word);
+    return postProcessPhonetic(word);
 }
 
 function buildSyllable(lastCharVowel) {
@@ -67,7 +67,7 @@ function buildSyllable(lastCharVowel) {
     return syllable;
 }
 
-async function postProcess(word) {
+async function postProcessPhonetic(word) {
     //if word is too short, add extra random syllable at end
     if (word.length < 5) {
         word += buildSyllable(isLastCharVowel(word));
@@ -154,14 +154,6 @@ function isLastCharVowel(word) {
     return currently;
 }
 
-function coinFlip() {
-    return Math.random() < 0.5;
-}
-
-function heavyTrueCoinFlip() {
-    return Math.random() < 0.85;
-}
-
 function randomSound(soundsArray) {
     return soundsArray[Math.floor(Math.random()*soundsArray.length)];
 }
@@ -180,18 +172,6 @@ function replaceLast(find, replace, string) {
 }
 
 async function doesPlayerExist(word) {
-    /*fetch('https://api.slothpixel.me/api/players/'+word)
-        .then(response => {
-            return response.json();
-        })
-        .then(data => {
-            console.log(data.username);
-            if (data.username !== undefined) {
-                return data.username.toLowerCase() === word.toLowerCase();
-            } else {
-                return false;
-            }
-        });*/
     const response = await fetch('https://api.slothpixel.me/api/players/' + word);
     return response.json();
 }

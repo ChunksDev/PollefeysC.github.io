@@ -6,6 +6,10 @@ async function generateNick() {
         case 0:
             nick = await generatePhoneticNick();
             addNick(nick);
+        //random suffixes and prefixes to OG's
+        case 1:
+            nick = await generateSemiOGNick();
+            addNick(nick);
     }
 }
 
@@ -14,4 +18,12 @@ function addNick(generatedNick) {
     let textNode = document.createTextNode(generatedNick);
     node.appendChild(textNode);
     document.getElementsByTagName("body").item(0).appendChild(node);
+}
+
+function coinFlip() {
+    return Math.random() < 0.5;
+}
+
+function heavyTrueCoinFlip() {
+    return Math.random() < 0.85;
 }
