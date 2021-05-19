@@ -6,10 +6,12 @@ async function generateNick() {
         case 0:
             nick = await generatePhoneticNick();
             addNick(nick);
+            break;
         //random suffixes and prefixes to OG's
         case 1:
             nick = await generateSemiOGNick();
             addNick(nick);
+            break;
     }
 }
 
