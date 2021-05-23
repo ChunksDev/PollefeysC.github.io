@@ -78,7 +78,9 @@ let whitelist = [
     //caoy
     "95434b4bc4adac0b178783f6d0066ad8",
     //duppy
-    "178bbe693da5089c67657b0d180d395d"
+    "178bbe693da5089c67657b0d180d395d",
+    //karter
+    "49d3ee8e8d3e893ec83fb59188d3f46c"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
