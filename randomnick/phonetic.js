@@ -26,6 +26,7 @@ function generatePhoneticNick() {
 }
 
 function buildSyllable(lastCharVowel) {
+
     let syllable = '';
     //decide if we start with vowel or not
     if (coinFlip() && !lastCharVowel) {
