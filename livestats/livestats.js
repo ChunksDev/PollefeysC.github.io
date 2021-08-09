@@ -80,7 +80,9 @@ let whitelist = [
     //duppy
     "178bbe693da5089c67657b0d180d395d",
     //karter
-    "49d3ee8e8d3e893ec83fb59188d3f46c"
+    "49d3ee8e8d3e893ec83fb59188d3f46c",
+    //stormzs
+    "51223a41b842e171de6911e645bf2c9f"
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
