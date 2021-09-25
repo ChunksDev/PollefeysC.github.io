@@ -84,7 +84,7 @@ let whitelist = [
     //stormzs
     "90532533fd72c9ce26e62fd4d9becfba",
     //Jayparm
-    "1b22419ece37c4fa3967c270bbd353e6",
+    "4acd391c7e88cec31ee04fae8fe9b414",
    
 ];
 let keyOwnerUuid = null;
