@@ -83,8 +83,9 @@ let whitelist = [
     "49d3ee8e8d3e893ec83fb59188d3f46c",
     //stormzs
     "90532533fd72c9ce26e62fd4d9becfba",
-    //kavirock
-    "0104d829924805ff0d45dd04533cc092"
+    //Jayparm
+    "1b22419ece37c4fa3967c270bbd353e6",
+   
 ];
 let keyOwnerUuid = null;
 let ownerIGN = null;
